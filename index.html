@@ -11,6 +11,8 @@
       <a-assets>
         <a-asset-item id="ground" src="Alex.assets/models/ground.glb"></a-asset-item>
         <a-asset-item id="palms" src="Alex.assets/models/palms.glb"></a-asset-item>
+        <a-asset-item id="cabin" src="Alex.assets/models/cabin.glb"></a-asset-item>
+        <a-asset-item id="poster" src="Alex.assets/models/poster.glb"></a-asset-item>
       </a-assets>
 
       <!-- Lights -->
@@ -38,6 +40,21 @@
         position="0 0 0"
         scale="1 1 1"
         shadow="cast: true"
+      ></a-entity>
+
+      <!-- Cabin (cast and receive shadows) -->
+      <a-entity
+        gltf-model="#cabin"
+        position="0 0 3"
+        scale="1 1 1"
+        shadow="cast: true; receive: true"
+      ></a-entity>
+
+      <!-- Poster inside cabin -->
+      <a-entity
+        gltf-model="#poster"
+        position="0 0 3" <!-- adjust if needed -->
+        scale="1 1 1"
       ></a-entity>
     </a-scene>
   </body>
