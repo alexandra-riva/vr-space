@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alex VR Space</title>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene shadow="type: pcfsoft" background="color: #000">
+      <!-- Assets -->
+      <a-assets>
+        <a-asset-item id="ground" src="Alex.assets/models/ground.glb"></a-asset-item>
+        <a-asset-item id="palms" src="Alex.assets/models/palms.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Lights -->
+      <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+      <a-entity 
+        light="type: directional; intensity: 2; castShadow: true" 
+        position="5 10 5"
+      ></a-entity>
+
+      <!-- Camera (higher angle) -->
+      <a-entity position="10 1 -10" rotation="0 90 0">
+        <a-camera wasd-controls-enabled="true" look-controls-enabled="true"></a-camera>
+      </a-entity>
+
+      <!-- Ground (receives shadows only) -->
+      <a-entity
+        gltf-model="#ground"
+        position="0 0 0"
+        scale="1 1 1"
+      ></a-entity>
+
+      <!-- Palms (cast shadows) -->
+      <a-entity
+        gltf-model="#palms"
+        position="0 0 0"
+        scale="1 1 1"
+        shadow="cast: true"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
