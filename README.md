@@ -21,4 +21,4 @@ This immersive WebXR experience is inspired by a real dream of mine — living i
 - Animated flying phoenix and orbiting butterfly
 - Interactive 3D models that play sounds when approached or clicked
 - Headset-compatible (WebXR support)
-- A portal that connects my scene with my teammates' spaces, as part of our shared repository: [futurespaces](https://github.com/fthuggy/futurespaces)
+- A glowing blue portal that connects my scene with my teammates' spaces. This feature works only within our shared repository: [futurespaces](https://github.com/fthuggy/futurespaces)
